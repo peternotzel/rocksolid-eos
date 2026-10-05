@@ -22,6 +22,7 @@ The agent routes into this cadence on any of the following:
 - "run l10" (live note-taking mode during the meeting itself)
 - "update scorecard with this week's numbers"
 - "l10 followup" / "post l10"
+- "review our l10" / "l10 feedback" / "how was our l10" (Followup flow, health check first)
 - "l10" alone — ambiguous. The agent should detect day-of-week
   context (is today the scheduled L10 day? is it before or after
   the scheduled time?) and offer Prep, Run, or Followup
@@ -162,22 +163,57 @@ completed file. Extract:
 - Which issues were solved? (move to resolved in issues-list)
 - Which Rock statuses changed? (update rocks-q{current})
 - What new to-dos were created? (carry forward into NEXT week's
-  notes file stub)
+  notes file stub). Include solutions from IDS that never made it
+  onto the To-Do list.
 - Were any new rocks or escalated decisions created?
+- Which Scorecard actuals were reported? (write them into this
+  week's column of `scorecard.md`)
+- Which red numbers or off-track Rocks were *not* dropped to the
+  Issues List? (propose adding them)
+- Cascading messages and the meeting rating
 
-**Step 2 — Show the diff.** Before writing anything, show the user
-all proposed changes to `issues-list.md`, `rocks-q{current}.md`, and
-the next week's notes file. User confirms or corrects.
+**Step 2 — L10 Health Check (feedback).** Before showing the diff,
+review the notes as an experienced implementer would and give the
+team feedback on *how* they ran the meeting, not just what was in
+it. Check the notes against these signals (all from
+`../knowledge/eos-level-10-meeting.md` and `../knowledge/eos-ids-track.md`):
 
-**Step 3 — Write the changes.** Atomic writes, one file at a time.
+| Signal | Healthy | Smell |
+|---|---|---|
+| Time | Starts on time, ends at 90 min | Late start, overrun, IDS squeezed |
+| Lanes | Scorecard / Rocks / Headlines are reported, misses drop to the Issues List | Discussion or problem-solving outside IDS |
+| IDS | Each issue ends in a To-Do, a Rock, or a decision | "Discussed, carried over"; same issue 2+ weeks |
+| Priority | Top 3 by importance first | Easy issues first, the big one never reached |
+| To-Dos | Owner + due within 7 days; ≥ 90% done week over week | No owner/date, many carried over |
+| Rating | Average ≥ 8, every < 8 explained | Low ratings without a reason |
+| Cascade | Messages for the company written down | Nothing cascaded |
+
+Output format, kept short:
+- **One thing that worked** (one line, with the evidence).
+- **Max 3 improvements**, most impactful first. Each one: what you
+  saw in the notes → why it matters (one clause) → the concrete
+  change for next week.
+- Offer to bake the changes into next week's prep (e.g. timing
+  prompts, a "drop it" reminder in the Scorecard section).
+
+Log the check under `cadences_active.weekly_l10.health_history` in
+`eos-state.md` (`date`, `rating_avg`, `todo_completion`, `smells`).
+If the same smell appears 3 weeks in a row, lead with it next time.
+
+**Step 3 — Show the diff.** Before writing anything, show the user
+all proposed changes to `issues-list.md`, `rocks-q{current}.md`,
+`scorecard.md`, and the next week's notes file. User confirms or
+corrects.
+
+**Step 4 — Write the changes.** Atomic writes, one file at a time.
 After each write, the agent notes it to the user.
 
-**Step 4 — Update state.** Update `eos-state.md`:
+**Step 5 — Update state.** Update `eos-state.md`:
 - `cadences_active.weekly_l10.last_run: {meeting_date}`
 - `cadences_active.weekly_l10.next_due: {meeting_date + 7 days}`
 - Increment the L10 run count
 
-**Step 5 — Check rubric progress.** If this is an early L10 (during
+**Step 6 — Check rubric progress.** If this is an early L10 (during
 Phase 1 Step 3 installation), count the populated notes files in
 `l10-notes/`. Once 4 exist with real content, the Tool 3 substance
 check for "L10 has actually been run" passes and the agent reports

@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0 — 2026-10-05
+
+- **L10 Health Check:** after a meeting ("review our l10", "l10 notes")
+  RockSolid reviews *how* the team ran it (time, segment discipline,
+  IDS resolution, priority, to-do completion, rating, cascade) and
+  returns one thing that worked plus at most three concrete fixes.
+  Logged in `health_history`; recurring smells are raised first.
+- L10 followup now also derives Scorecard actuals, unlisted red numbers
+  and off-track Rocks, and IDS solutions missing from the To-Do list.
+- **Short by default:** new core rule, about 150 words per turn, verdict
+  first, details go into files.
+- Shorter, easier-to-read README demos.
+
 ## 1.0.0 — 2026-10-05
 
 First public release.

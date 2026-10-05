@@ -14,7 +14,7 @@
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-EA580C?style=flat-square">
   <img alt="Works in Cowork" src="https://img.shields.io/badge/works%20in-Cowork%20%C2%B7%20Claude%20Code%20%C2%B7%20claude.ai-1C1917?style=flat-square">
   <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-78716C?style=flat-square">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-FB923C?style=flat-square">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-FB923C?style=flat-square">
 </p>
 
 ---
@@ -51,30 +51,13 @@ works more like a strict implementer:
 
 ## 🎬 See it in action
 
-### "Can we skip the Accountability Chart?" — *No. Here's why, with your own numbers.*
+### 1 · "Can we skip the Accountability Chart?" No, and here's why, with your own data.
 
-<img src="docs/images/bypass-challenge.png" alt="RockSolid pushing back on a request to skip the Accountability Chart, citing the team's own checkup scores" width="100%">
+<img src="docs/images/bypass-challenge.png" alt="RockSolid pushing back on a request to skip the Accountability Chart, citing the team's own checkup score" width="100%">
 
-### Monday morning: your L10 is prepped before you've had coffee
+### 2 · After the L10: honest feedback, three fixes for next Monday
 
-<img src="docs/images/l10-prep.png" alt="RockSolid preparing a Level 10 Meeting: multi-week red Scorecard numbers, off-track Rocks, forgotten to-dos" width="100%">
-
-<details>
-<summary><b>More screenshots:</b> tempo plan · scribe mode · substance check</summary>
-
-#### Onboarding ends with a dated, personal plan, not a lecture
-
-<img src="docs/images/tempo-plan.png" alt="Tempo recommendation with reasoning and a dated plan for all seven steps" width="100%">
-
-#### Scribe mode: a whiteboard photo becomes an Accountability Chart
-
-<img src="docs/images/scribe-mode.png" alt="RockSolid turning whiteboard notes into a structured Accountability Chart" width="100%">
-
-#### "Check my accountability chart": 6 of 10 checks pass, so the step isn't done
-
-<img src="docs/images/substance-check.png" alt="Substance rubric result: 6 passed, 4 open, step stays in progress" width="100%">
-
-</details>
+<img src="docs/images/l10-feedback.png" alt="RockSolid reviewing L10 meeting notes: what worked and three concrete improvements" width="100%">
 
 Full conversations: [`examples/`](examples/).
 
@@ -143,7 +126,8 @@ folder, which is the structure Claude's skill upload expects.
 | `start eos` | Onboarding: 20-statement Organizational Checkup™, workspace scan, tempo recommendation, your personal plan |
 | `continue` / `what's next` | Reads state, checks drift, offers what's due: an L10, quarter-end Rocks, or the next implementation step |
 | `prep my l10` | Builds this week's Level 10 agenda from your Scorecard, Rocks, to-dos and Issues List |
-| `l10 notes` | Turns your meeting notes into updated Rocks, Issues, to-dos and Scorecard |
+| `l10 notes` | Turns your meeting notes into updated Rocks, Issues, to-dos and Scorecard numbers |
+| `review our l10` | L10 health check: one thing that worked, max. 3 concrete fixes (time, IDS, to-dos, rating) |
 | `work on accountability chart` | Walks the team through structure first, then names, then GWC™ and People Analyzer™ |
 | `set rocks` | 3–7 SMART, binary Rocks per quarter, each tied to a seat on the chart |
 | `check my v/to` | Runs the substance rubric for that tool and tells you exactly what's missing |
@@ -204,6 +188,7 @@ plugins/rocksolid/skills/rocksolid/
 | [03 · Scribe mode](examples/03-scribe-mode-accountability-chart.md) | A whiteboard dump becomes `accountability-chart.md` |
 | [04 · Substance check](examples/04-substance-check.md) | Why a good-looking file can still fail the check |
 | [05 · L10 prep](examples/05-l10-prep.md) | Week 11: red numbers, off-track Rocks, a forgotten to-do |
+| [06 · L10 feedback](examples/06-l10-feedback.md) | A messy meeting, reviewed: problem-solving outside IDS, 25% to-do completion |
 | [Workspace, week 1](examples/brightline-week1/) · [week 11](examples/brightline-week11/) | The actual files RockSolid wrote: state, plan, chart, L10 agenda |
 
 ---

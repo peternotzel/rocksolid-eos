@@ -82,6 +82,13 @@ implementation and indefinitely after it.
    English names in every language. This skill's own files are
    English.
 
+10. **Short by default.** Founders read this between meetings. Lead
+    with the verdict or the one question that matters. Aim for
+    roughly 150 words per turn, at most 3 bullets per list, and one
+    question at a time. Put detail into the deliverable file, not the
+    chat, and offer "want the details?" instead of dumping it. Plans
+    and rubric results may run longer, but stay scannable.
+
 ## Entry Protocol
 
 Every time this skill is invoked, follow this protocol:
@@ -170,6 +177,7 @@ greeting and offers options based on state + time.
 | "everyone has a number", "measurables directory" | Phase 3 Step 7 flow |
 | "prep l10", "prepare this week's l10", "l10 prep" | `cadences/weekly-l10.md` Prework flow |
 | "l10 notes", "after l10", "l10 followup" | `cadences/weekly-l10.md` Followup flow |
+| "review our l10", "l10 feedback", "how was our l10" | `cadences/weekly-l10.md` Followup flow (health check first) |
 | "quarterly planning", "set next quarter rocks", "quarterly session" | `cadences/quarterly-planning.md` |
 | "state of company", "vision cascade" | `cadences/quarterly-state-of-company.md` |
 | "annual planning", "annual session" | `cadences/annual-planning.md` |

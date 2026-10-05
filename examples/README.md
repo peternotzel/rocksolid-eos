@@ -11,6 +11,7 @@ brokerage, 34 employees, 5-person leadership team, Hamburg).
 | [03-scribe-mode-accountability-chart.md](03-scribe-mode-accountability-chart.md) | Whiteboard notes → structured chart, decisions, file written |
 | [04-substance-check.md](04-substance-check.md) | `check my accountability chart` → 6/10, step stays in progress |
 | [05-l10-prep.md](05-l10-prep.md) | Week 11 Monday L10 prep |
+| [06-l10-feedback.md](06-l10-feedback.md) | The L10 health check on a messy meeting |
 
 ## Workspaces
 
