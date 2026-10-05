@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build skill ZIP
+        run: ./scripts/package.sh
+      - name: Verify ZIP structure
+        run: |
+          unzip -l dist/rocksolid.zip | grep -q ' rocksolid/SKILL.md$'
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/rocksolid.zip \
+            --title "RockSolid $GITHUB_REF_NAME" --generate-notes
