@@ -158,25 +158,7 @@ back to the step you're on.
 
 ## 🧭 How it works
 
-```mermaid
-flowchart LR
-    O["🧪 Onboarding<br/>Checkup · scan · tempo · plan"] --> P1
-    subgraph P1["Phase 1 · Structure & Traction"]
-      direction TB
-      A1["1 · Accountability Chart"] --> A2["2 · Rocks"] --> A3["3 · Level 10 Meeting"] --> A4["4 · Scorecard"]
-    end
-    P1 -- "gate ✓" --> P2
-    subgraph P2["Phase 2 · Vision"]
-      B1["5 · V/TO (all 8 questions)"]
-    end
-    P2 -- "gate ✓" --> P3
-    subgraph P3["Phase 3 · Systemization"]
-      direction TB
-      C1["6 · Core Processes"] --> C2["7 · Everyone Has a Number"]
-    end
-    P3 -- "gate ✓" --> G["🎓 Graduation<br/>re-checkup + delta"]
-    G --> OP["🔁 Operating mode<br/>weekly L10 · quarterly Rocks · annual planning"]
-```
+<img src="docs/images/how-it-works.png" alt="Onboarding, then Phase 1 (Accountability Chart, Rocks, L10, Scorecard), Phase 2 (V/TO), Phase 3 (Core Processes, Everyone Has a Number), each behind a substance gate, then graduation into operating mode, with cadences running alongside" width="100%">
 
 The program follows Wickman's own sequence. Traction comes before vision,
 because a team that already runs Rocks and L10s writes a vision it will
