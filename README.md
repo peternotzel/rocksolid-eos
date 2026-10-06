@@ -67,7 +67,7 @@ Full conversations: [`examples/`](examples/).
 
 ### Option A: Claude Cowork / Claude desktop / claude.ai *(recommended)*
 
-1. **Download** [`rocksolid.zip`](https://github.com/fylingpete/rocksolid-eos/releases/latest/download/rocksolid.zip)
+1. **Download** [`rocksolid.zip`](https://github.com/peternotzel/rocksolid-eos/releases/latest/download/rocksolid.zip)
    from the latest release. Don't unzip it.
 2. In Claude, open **Customize → Skills**, click **Add**, choose
    **Upload skill** and drop in `rocksolid.zip`.
@@ -85,7 +85,7 @@ Full conversations: [`examples/`](examples/).
 ### Option B: Claude Code (plugin marketplace)
 
 ```bash
-claude plugin marketplace add fylingpete/rocksolid-eos
+claude plugin marketplace add peternotzel/rocksolid-eos
 ```
 
 ```bash
@@ -99,7 +99,7 @@ to get updates.
 ### Option C: Manual (Claude Code, no marketplace)
 
 ```bash
-git clone https://github.com/fylingpete/rocksolid-eos.git
+git clone https://github.com/peternotzel/rocksolid-eos.git
 ```
 
 ```bash
@@ -252,6 +252,6 @@ paraphrase policy.
 ---
 
 <p align="center">
-  Built by <a href="https://github.com/fylingpete"><b>@fylingpete</b></a> with Claude.<br>
+  Built by <a href="https://github.com/peternotzel"><b>@peternotzel</b></a> with Claude.<br>
   If RockSolid keeps your Monday L10 honest, <b>⭐ star the repo</b> and tell another founder.
 </p>

@@ -2,8 +2,8 @@
   "name": "rocksolid",
   "description": "RockSolid — an AI EOS(TM) Implementer for Claude",
   "owner": {
-    "name": "fylingpete",
-    "url": "https://github.com/fylingpete"
+    "name": "peternotzel",
+    "url": "https://github.com/peternotzel"
   },
   "plugins": [
     {

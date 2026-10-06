@@ -3,11 +3,11 @@
   "version": "1.1.0",
   "description": "An AI EOS(TM) Implementer: guides a leadership team through the Entrepreneurial Operating System with substance-checked phase gates and runs your L10, quarterly and annual cadence.",
   "author": {
-    "name": "fylingpete",
-    "url": "https://github.com/fylingpete"
+    "name": "peternotzel",
+    "url": "https://github.com/peternotzel"
   },
-  "homepage": "https://github.com/fylingpete/rocksolid-eos",
-  "repository": "https://github.com/fylingpete/rocksolid-eos",
+  "homepage": "https://github.com/peternotzel/rocksolid-eos",
+  "repository": "https://github.com/peternotzel/rocksolid-eos",
   "license": "MIT",
   "keywords": ["eos", "traction", "entrepreneurial-operating-system", "l10", "rocks", "scorecard", "leadership", "founder", "operations"]
 }
